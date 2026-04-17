@@ -1,2 +1,17 @@
-# test change
-run: echo "Workflow test run 🔥"
+name: PR Workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Test run
+        run: echo "Workflow chal raha hai"
