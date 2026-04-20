@@ -18,6 +18,7 @@ jobs:
         run: echo "Workflow chal raha hai"
 
   say-bye:
+    needs : build
     runs-on: ubuntu-latest
 
     steps:
