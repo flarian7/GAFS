@@ -1,6 +1,7 @@
 name: PR Workflow
 
 on:
+  push:
   pull_request:
     branches:
       - main
@@ -13,5 +14,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Test run
+      - name: Say Hello
         run: echo "Workflow chal raha hai"
+
+  say-bye:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Bye
+        run: echo "Bye bye from workflow"
