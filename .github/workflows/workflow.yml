@@ -1,42 +1,42 @@
-# name: PR Workflow
+name: PR Workflow
 
-# on:
-#   push:
-#   pull_request:
-#     branches:
-#       - main
+on:
+  push:
+  pull_request:
+    branches:
+      - main
 
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
 
-#       - name: Say Hello
-#         run: echo "Workflow chal raha hai"
+      - name: Say Hello
+        run: echo "Workflow chal raha hai"
 
-#   say-bye:
-#     needs : build
-#     runs-on: ubuntu-latest
+  say-bye:
+    needs : build
+    runs-on: ubuntu-latest
 
-#     steps:
-#       - name: Say Bye
-#         run: echo "Bye bye from workflow"
+    steps:
+      - name: Say Bye
+        run: echo "Bye bye from workflow"
 
-# name: Uses action
+name: Uses action
 
-# on:
-#   push:
+on:
+  push:
 
-# jobs:
-#   test:
-#     runs-on: ubuntu-latest
+jobs:
+  test:
+    runs-on: ubuntu-latest
 
-#     steps:
-#       - name: Checkout code   # clone a repo
-#         uses: actions/checkout@v4
+    steps:
+      # - name: Checkout code   # clone a repo
+      #   uses: actions/checkout@v4
 
-#       - name: List files
-#         run: ls
+      - name: List files
+        run: ls
