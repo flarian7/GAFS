@@ -25,18 +25,18 @@
 #       - name: Say Bye
 #         run: echo "Bye bye from workflow"
 
-name: Uses action
+# name: Uses action
 
-on:
-  push:
+# on:
+#   push:
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
+# jobs:
+#   test:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code   # clone a repo
-        uses: actions/checkout@v4
+#     steps:
+#       - name: Checkout code   # clone a repo
+#         uses: actions/checkout@v4
 
-      - name: List files
-        run: ls
+#       - name: List files
+#         run: ls
